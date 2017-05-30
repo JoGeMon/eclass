@@ -23,10 +23,9 @@
 
 		public static function getMesesDisponibles(){
 			$meses = DB::table('coordinadora')
-				->select(DB::Raw("MONTH(fecha) as Mes"))
+				->select(DB::Raw("MONTH(fecha) as 'mes', ELT(DATE_FORMAT(fecha, '%m'), 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre') as 'nomMes'"))
 				->distinct()
-				->lists('Mes');
-			
+				->lists('nomMes','mes');
 			return $meses;
 		}
 

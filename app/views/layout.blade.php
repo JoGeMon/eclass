@@ -5,7 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{{HTML::script('assets/js/jquery.js')}}
+		{{HTML::script('assets/js/bootstrap.min.js')}}
+		{{HTML::script('assets/js/jquery-ui.min.js')}}
 		{{HTML::style('assets/css/bootstrap.min.css')}}
+		{{HTML::style('assets/css/jquery-ui.css')}}
 		<title>Eclass - Coordinadoras</title>
 	</head>
 	<body>
