@@ -25,4 +25,16 @@ class CoordinadoraController extends \BaseController {
 		));
 
 	}
+
+	public function eficiencia($mes = 1)
+	{
+		$meses = Coordinadora::getMesesDisponibles();
+		$productos = Coordinadora::getProductos($mes);
+		$coordinadoras = Coordinadora::getCoordinadorasxProducto($mes);
+		return View::make('vista2', array(
+			'productos' => $productos,
+			'coordinadoras' => $coordinadoras,
+			'meses' => $meses,
+		));
+	}
 }

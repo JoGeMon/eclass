@@ -1,6 +1,6 @@
 <div class="col-md-6">
 	<div class="panel panel-default">
-		<div class="panel-heading"><h4 class="panel-title">Mejor Coordinadora</h4></div>
+		<div class="panel-heading"><h4 class="panel-title">Coordinadora con más atenciones</h4></div>
 		<div class="panel-body">
 			<div class="col-md-6">
 				{{$mejor->id_coordinadora_crm}}
@@ -13,7 +13,7 @@
 </div>
 <div class="col-md-6">
 	<div class="panel panel-default">
-		<div class="panel-heading"><h4 class="panel-title">Peor Coordinadora</h4></div>
+		<div class="panel-heading"><h4 class="panel-title">Coordinadora con menos atenciones</h4></div>
 		<div class="panel-body">
 			<div class="col-md-6">
 				{{$peor->id_coordinadora_crm}}

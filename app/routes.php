@@ -11,14 +11,19 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', array(
+	'as' => 'index',
+	'uses' => 'CoordinadoraController@index'
+));
 
 Route::any('/ranking', array(
 	'as' => 'ranking',
 	'uses' => 'CoordinadoraController@index'
+));
+
+Route::any('/eficiencia/{mes}', array(
+	'as' => 'eficiencia',
+	'uses' => 'CoordinadoraController@eficiencia'
 ));
 
 Route::get('/detalleRanking/{mes}',array(
